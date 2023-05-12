@@ -2,13 +2,33 @@
    <ul class="sidebar-nav" id="sidebar-nav">
       <li class="nav-item">
          @auth
-            @if (auth()->user()->role=="admin")
+            @if (auth()->user()->role=="admin2")
                <a class="nav-link collapsed {{ ($active === "home") ? 'active' : '' }}" href="/home/admin"> <i class="bi bi-grid"></i><span>Home</span> </a>
-               <a class="nav-link collapsed {{ ($active === "log activity") ? 'active' : '' }}" href="/home/admin/logActivity"> <i class="bi bi-eye"></i><span>Log Activity</span> </a>
+               <a class="nav-link collapsed {{ ($active === "log activity") ? 'active' : '' }}" href="/home/admin/logActivity"> <i class="bi bi-eye"></i><span>Log Activity</span></a>
             @elseif (auth()->user()->role=="user")
                <a class="nav-link collapsed {{ ($active === "home") ? 'active' : '' }}" href="/home"> <i class="bi bi-grid"></i><span>Home</span> </a>
-               <a class="nav-link collapsed {{ ($active === "pesanan") ? 'active' : '' }}" href="/pesananSaya"> <i class="bi bi-list-ul"></i><span>Pesanan saya</span> </a> 
-               <a class="nav-link collapsed {{ ($active === "hubungi") ? 'active' : '' }}" href="https://wa.me/6281818180551"> <i class="bi bi-whatsapp"></i><span>Hubungi Admin</span> </a> 
+               <span class="nav-link collapsed">Market</span>
+               <a class="nav-link collapsed {{ ($active === "pesanan") ? 'active' : '' }}" href="/pesananSaya"> <i class="bi bi-list-ul"></i><span>Omegamon</span> </a> 
+               <a class="nav-link collapsed {{ ($active === "hubungi") ? 'active' : '' }}" href="https://wa.me/6281818180551"> <i class="bi bi-whatsapp"></i><span>Alphamon</span></a>
+               <span class="nav-link collapsed">Party</span>
+               <a class="nav-link collapsed {{ ($active === "pesanan") ? 'active' : '' }}" href="/pesananSaya"> <i class="bi bi-list-ul"></i><span>Omegamon</span> </a> 
+               <a class="nav-link collapsed {{ ($active === "hubungi") ? 'active' : '' }}" href="https://wa.me/6281818180551"> <i class="bi bi-whatsapp"></i><span>Alphamon</span></a> 
+               <span class="nav-link collapsed">Chat</span> 
+               <a class="nav-link collapsed {{ ($active === "hubungi") ? 'active' : '' }}" href=""> <i class="bi bi-whatsapp"></i><span>All</span> </a> 
+               <a class="nav-link collapsed {{ ($active === "pesanan") ? 'active' : '' }}" href="/pesananSaya"> <i class="bi bi-list-ul"></i><span>Omegamon</span> </a> 
+               <a class="nav-link collapsed {{ ($active === "hubungi") ? 'active' : '' }}" href="https://wa.me/6281818180551"> <i class="bi bi-whatsapp"></i><span>Alphamon</span></a> 
+               @elseif (auth()->user()->role=="admin")
+               <a class="nav-link collapsed {{ ($active === "home") ? 'active' : '' }}" href="/home"> <i class="bi bi-grid"></i><span>Home</span> </a>
+               <span class="nav-link collapsed">Market</span>
+               <a class="nav-link collapsed {{ ($active === "pesanan") ? 'active' : '' }}" href="/pesananSaya"> <i class="bi bi-list-ul"></i><span>Omegamon</span> </a> 
+               <a class="nav-link collapsed {{ ($active === "hubungi") ? 'active' : '' }}" href="https://wa.me/6281818180551"> <i class="bi bi-whatsapp"></i><span>Alphamon</span></a>
+               <span class="nav-link collapsed">Party</span>
+               <a class="nav-link collapsed {{ ($active === "pesanan") ? 'active' : '' }}" href="/pesananSaya"> <i class="bi bi-list-ul"></i><span>Omegamon</span> </a> 
+               <a class="nav-link collapsed {{ ($active === "hubungi") ? 'active' : '' }}" href="https://wa.me/6281818180551"> <i class="bi bi-whatsapp"></i><span>Alphamon</span></a> 
+               <span class="nav-link collapsed">Chat</span> 
+               <a class="nav-link collapsed {{ ($active === "hubungi") ? 'active' : '' }}" href=""> <i class="bi bi-whatsapp"></i><span>All</span> </a> 
+               <a class="nav-link collapsed {{ ($active === "pesanan") ? 'active' : '' }}" href="/pesananSaya"> <i class="bi bi-list-ul"></i><span>Omegamon</span> </a> 
+               <a class="nav-link collapsed {{ ($active === "hubungi") ? 'active' : '' }}" href="https://wa.me/6281818180551"> <i class="bi bi-whatsapp"></i><span>Alphamon</span></a> 
             @endif        
          @endauth    
       </li>

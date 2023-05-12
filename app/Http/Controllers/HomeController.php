@@ -13,4 +13,11 @@ class HomeController extends Controller
             'active' => 'home',
         ]);
     }
+    public function homeAdmin()
+    {
+        return view('user.home', [
+            'title' => 'Dats Center - Home',
+            'active' => 'home',
+        ]);
+    }
 }

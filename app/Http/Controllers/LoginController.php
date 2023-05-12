@@ -34,6 +34,8 @@ class LoginController extends Controller
             session(['email' => $email]);
             if($role=='admin'){
                 return redirect('/home/admin');
+            }elseif($role=='admin2'){
+                return redirect('/home/admin2');
             }else{
                 return redirect('/home');
             }
