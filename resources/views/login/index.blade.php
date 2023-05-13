@@ -4,23 +4,23 @@
    <div class="container">
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
       @if (session()->has('success'))
-         <div class="alert alert-success alert-dismissible fade show justify-content-center col-4 mb-4" role="alert">
+         <div class="alert alert-success alert-dismissible fade show justify-content-center col-4 mb-4 text-light border border-white" style="background-color: rgba(129, 129, 129, 0.2);" role="alert">
          {{ session('success') }}
-         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         <button type="button" class="btn-close" data-bs-dismiss="alert" style="color:white" aria-label="Close"></button>
          </div>
       @endif
 
       @if (session()->has('loginError'))
-         <div class="alert alert-danger alert-dismissible fade show justify-content-center col-4 mb-4" role="alert">
+         <div class="alert alert-dismissible fade show justify-content-center col-4 mb-4 text-light border border-white" style="background-color: rgba(129, 129, 129, 0.2);" role="alert">
             {{ session('loginError') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" style="color:white" aria-label="Close"></button>
          </div>
       @endif
       <div class="container">
          <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
                <div class="card mb-3" style="background-color: rgba(106, 0, 255, 0);">
-                  <div class="card-body login border border-white" style="background-color: rgba(37, 37, 37, 0.5);">
+                  <div class="card-body login border border-light" style="background-color: rgba(37, 37, 37, 0.5);">
                      <div class="pt-4 pb-2">
                         <h5 class="card-title text-center pb-0 fs-4 text-light">LOGIN</h5>
                      </div>
@@ -42,8 +42,8 @@
                            <label for="password" class="text-light">Password</label>
                         </div>
                                  
-                        <div class="col-12 mt-4 mb-2"> <button class="btn w-100 text-light" style="background-color: rgba(52, 0, 94, 1);" type="submit">Login</button></div>
-                        <p class="small text-light">Belum Punya Akun? <a href="/register">Register</a></p>
+                        <div class="col-12 mt-4 mb-2"> <button class="btn w-100 text-light border border-dark" style="background-color: rgba(52, 0, 94, 1);" type="submit">Login</button></div>
+                        <p class="small text-light">Don't have an account yet? <a href="/register">Register</a></p>
                      </form>
                   </div>
                </div>
